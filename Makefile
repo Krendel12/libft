@@ -16,7 +16,7 @@ SRC=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 
 OBJ=$(SRC:.c=.o)
 
-HDRS=./libft.h
+HDRS=./
 
 all: $(NAME)
 
