@@ -12,7 +12,8 @@ SRC=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 	ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c\
 	ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c\
 	ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_d_bblsort.c\
-	ft_d_minind.c ft_ll_fact.c ft_lf_pow.c ft_d_sqrt.c ft_errmsg.c ft_strpbrk.c
+	ft_d_minind.c ft_ll_fact.c ft_lf_pow.c ft_d_sqrt.c ft_errmsg.c ft_strpbrk.c\
+	ft_gnl.c
 
 OBJ=$(SRC:.c=.o)
 

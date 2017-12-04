@@ -16,6 +16,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <fcntl.h>
+
+# define BUFF_SIZE 1024
 
 typedef struct		s_list
 {
@@ -23,6 +26,16 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_gnl
+{
+	char			*b;
+	int				fd;
+	int				rdn;
+	int				bufflen;
+	int				bslshn;
+	struct s_gnl	*next;
+}					t_gnl;
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
@@ -89,5 +102,6 @@ double				ft_lf_pow(double num, short pow);
 double				ft_d_sqrt(double x);
 long long			ft_ll_fact(short num);
 int					*ft_d_bblsort(int *arr, size_t len);
+int					ft_gnl(const int fd, char **line);
 
 #endif
