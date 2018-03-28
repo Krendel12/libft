@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   0ft_strlen.c                                       :+:      :+:    :+:   */
+/*   ft_putnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astrelov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: astrielov <astrielov@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/31 12:36:43 by astrelov          #+#    #+#             */
-/*   Updated: 2017/10/31 12:36:44 by astrelov         ###   ########.fr       */
+/*   Created: 2018/03/28 12:53:10 by astrielov         #+#    #+#             */
+/*   Updated: 2018/03/28 12:57:19 by astrielov        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char const *s)
+void	ft_putnstr(char const *s, size_t n)
 {
 	size_t	len;
 
-	len = 0;
-	while (s && s[len])
-		len++;
-	return (len);
+	len = ft_strlen(s);
+	if (s)
+		write(1, s, (len > n) ? n : len);
 }
