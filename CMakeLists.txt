@@ -4,6 +4,7 @@ project(libft)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(libft
+        libft.h
         ft_atoi.c
         ft_bzero.c
         ft_d_bblsort.c
@@ -70,4 +71,6 @@ add_executable(libft
         ft_strtrim.c
         ft_tolower.c
         ft_toupper.c
-        libft.h ft_strtoupp.c ft_strtolow.c ft_putnstr.c)
+        ft_strtoupp.c
+        ft_strtolow.c
+        ft_putnstr.c)
