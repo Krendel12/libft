@@ -18,7 +18,7 @@ void	ft_strtoupp(char *str)
 		return ;
 	while (*str)
 	{
-		*str = (char )ft_toupper(*str);
+		*str = (char)ft_toupper(*str);
 		str++;
 	}
 }

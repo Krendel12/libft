@@ -4,3 +4,5 @@
 libft\.a
 
 obj/
+
+cmake-build-debug/

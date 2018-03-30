@@ -18,7 +18,7 @@ void	ft_strtolow(char *str)
 		return ;
 	while (*str)
 	{
-		*str = (char )ft_tolower(*str);
+		*str = (char)ft_tolower(*str);
 		str++;
 	}
 }
