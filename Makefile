@@ -6,7 +6,7 @@
 #    By: astrielov <astrielov@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/29 21:14:14 by astrielov         #+#    #+#              #
-#    Updated: 2018/03/29 22:31:47 by astrielov        ###   ########.fr        #
+#    Updated: 2018/07/17 22:27:56 by null             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,27 @@ SRCS =	ft_atoi.c \
 		ft_strtoupp.c \
 		ft_strtrim.c \
 		ft_tolower.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_printf/src/ft_printf.c \
+        ft_printf/src/parse/flags.c \
+        ft_printf/src/parse/parse.c \
+        ft_printf/src/parse/width.c \
+        ft_printf/src/parse/precision.c \
+        ft_printf/src/parse/length.c \
+        ft_printf/src/handle/handle.c \
+        ft_printf/src/handle/number.c \
+        ft_printf/src/handle/char.c \
+        ft_printf/src/handle/wchar.c \
+        ft_printf/src/handle/string.c \
+        ft_printf/src/handle/pointer.c \
+        ft_printf/src/handle/wstring.c \
+        ft_printf/src/handle/invalid_specifier.c \
+        ft_printf/src/handle/integer/integer.c \
+        ft_printf/src/handle/integer/octal.c \
+        ft_printf/src/handle/integer/decimal.c \
+        ft_printf/src/handle/integer/hexademical.c \
+        ft_printf/src/helpers/buffer.c \
+        ft_printf/src/helpers/push_chars.c
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -88,7 +108,7 @@ OBJS = $(patsubst %.c, $(OBJDIR)%.o, $(SRCS))
 
 OBJDIR = obj/
 
-HEADERS = -I ./
+HEADERS = -I ./ -I ./ft_printf/includes
 
 all: $(NAME)
 
@@ -100,9 +120,13 @@ $(OBJS): | objdir
 
 objdir:
 	@mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJDIR)/ft_printf/src/libft
+	@mkdir -p $(OBJDIR)/ft_printf/src/parse
+	@mkdir -p $(OBJDIR)/ft_printf/src/handle/integer
+	@mkdir -p $(OBJDIR)/ft_printf/src/helpers
 
 $(OBJDIR)%.o: %.c
-	@gcc $(CFLAGS) $(HEADERS) -c $< -o $@
+	gcc $(CFLAGS) $(HEADERS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJS)
