@@ -13,8 +13,7 @@
 #ifndef FT_PRINTF_NEW_FT_PRINTF_H
 # define FT_PRINTF_NEW_FT_PRINTF_H
 
-#include <stdio.h>
-
+# include "../../libft.h"
 # include <inttypes.h>
 # include <stdarg.h>
 # include <stddef.h>
