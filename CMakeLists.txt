@@ -23,6 +23,7 @@ set(FT_PRINTF
         ft_printf/src/handle/integer/octal.c
         ft_printf/src/handle/integer/hexademical.c
         ft_printf/src/handle/integer/decimal.c
+        ft_printf/src/handle/integer/tmp.c
         ft_printf/src/helpers/push_chars.c
         ft_printf/src/handle/invalid_specifier.c)
 

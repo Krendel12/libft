@@ -6,12 +6,11 @@
 /*   By: astrielov <astrielov@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 09:55:43 by astrielov         #+#    #+#             */
-/*   Updated: 2018/04/20 15:40:04 by astrelov         ###   ########.fr       */
+/*   Updated: 2018/07/20 16:36:49 by astrelov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
-#include "../libft/libft.h"
 
 void	width_helper(char **format, va_list va, t_pf *arg)
 {
