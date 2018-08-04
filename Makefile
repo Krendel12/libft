@@ -115,7 +115,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
-	@printf "\033[0;32mlibft.a: DONE\033[0m\n"
+	@printf "\n\033[0;32mlibft.a: DONE\033[0m\n"
 
 $(OBJS): | objdir
 
@@ -127,7 +127,8 @@ objdir:
 	@mkdir -p $(OBJDIR)/ft_printf/src/helpers
 
 $(OBJDIR)%.o: %.c
-	gcc $(CFLAGS) $(HEADERS) -c $< -o $@
+	@gcc $(CFLAGS) $(HEADERS) -c $< -o $@
+	@printf "."
 
 clean:
 	@rm -f $(OBJS)
