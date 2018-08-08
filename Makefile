@@ -6,7 +6,7 @@
 #    By: astrielov <astrielov@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/29 21:14:14 by astrielov         #+#    #+#              #
-#    Updated: 2018/08/08 13:28:02 by astrelov         ###   ########.fr        #
+#    Updated: 2018/08/08 13:38:41 by astrelov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,6 +145,6 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY: clean fclean re all
+.PHONY:			clean fclean re all
 
-.NOTPARALLEL: clean fclean re all
+.NOTPARALLEL:	clean fclean re all
