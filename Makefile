@@ -6,7 +6,7 @@
 #    By: astrielov <astrielov@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/29 21:14:14 by astrielov         #+#    #+#              #
-#    Updated: 2018/08/08 13:38:41 by astrelov         ###   ########.fr        #
+#    Updated: 2018/08/08 13:45:57 by astrelov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ SRCS =			ft_atoi.c \
 				ft_strpbrk.c \
 				ft_strrchr.c \
 				ft_strsplit.c \
+				ft_strsplit_del.c \
 				ft_strstr.c \
 				ft_strsub.c \
 				ft_strtolow.c \
