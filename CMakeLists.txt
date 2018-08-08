@@ -98,4 +98,6 @@ add_library(ft
         ft_toupper.c
         ft_strtoupp.c
         ft_strtolow.c
-        ft_putnstr.c)
+        ft_putnstr.c
+        ft_lstrev.c
+        )
