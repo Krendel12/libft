@@ -35,7 +35,6 @@ add_library(ft
         ft_d_bblsort.c
         ft_d_minind.c
         ft_d_sqrt.c
-        ft_errmsg.c
         ft_gnl.c
         ft_isalnum.c
         ft_isalpha.c
@@ -100,4 +99,5 @@ add_library(ft
         ft_strtolow.c
         ft_putnstr.c
         ft_lstrev.c
-        ft_lstlen.c)
+        ft_lstlen.c
+        ft_err_exit.c)

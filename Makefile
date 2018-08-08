@@ -6,7 +6,7 @@
 #    By: astrielov <astrielov@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/29 21:14:14 by astrielov         #+#    #+#              #
-#    Updated: 2018/08/08 13:24:19 by astrelov         ###   ########.fr        #
+#    Updated: 2018/08/08 13:28:02 by astrelov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =			ft_atoi.c \
 				ft_d_bblsort.c \
 				ft_d_minind.c \
 				ft_d_sqrt.c \
-				ft_errmsg.c \
+				ft_err_exit.c \
 				ft_gnl.c \
 				ft_isalnum.c \
 				ft_isalpha.c \

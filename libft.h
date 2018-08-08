@@ -6,7 +6,7 @@
 /*   By: astrelov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 14:18:27 by astrelov          #+#    #+#             */
-/*   Updated: 2018/07/20 16:29:31 by astrelov         ###   ########.fr       */
+/*   Updated: 2018/08/08 13:41:22 by astrelov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,11 +103,11 @@ void				ft_strtoupp(char *str);
 char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-void				ft_errmsg(char	*err);
 double				ft_lf_pow(double num, short pow);
 double				ft_d_sqrt(double x);
 long long			ft_ll_fact(short num);
 int					*ft_d_bblsort(int *arr, size_t len);
 int					ft_gnl(const int fd, char **line);
+int					ft_err_exit(char *err_msg);
 
 #endif
