@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstrev.c                                        :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: astrelov <astrelov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/08 11:51:15 by astrelov          #+#    #+#             */
-/*   Updated: 2018/08/08 12:47:01 by astrelov         ###   ########.fr       */
+/*   Created: 2018/08/08 13:22:34 by astrelov          #+#    #+#             */
+/*   Updated: 2018/08/08 13:22:34 by astrelov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	rev(t_list **head, t_list *prev, t_list *curr)
+size_t	ft_lstlen(t_list *lst)
 {
-	if (curr)
-	{
-		rev(head, curr, curr->next);
-		curr->next = prev;
-	}
-	else if (prev)
-		*head = prev;
-	else if ((*head)->next)
-	{
-		prev = *head;
-		curr = (*head)->next;
-		rev(head, curr, (*head)->next->next);
-		curr->next = prev;
-		prev->next = NULL;
-	}
-}
+	size_t	len;
 
-t_list		*ft_lstrev(t_list **head)
-{
-	rev(head, NULL, NULL);
-	return (*head);
+	len = 0;
+	while (lst)
+	{
+		len++;
+		lst = lst->next;
+	}
+	return (len);
 }

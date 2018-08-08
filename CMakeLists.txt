@@ -100,4 +100,4 @@ add_library(ft
         ft_strtolow.c
         ft_putnstr.c
         ft_lstrev.c
-        )
+        ft_lstlen.c)
