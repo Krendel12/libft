@@ -6,13 +6,13 @@
 /*   By: astrelov <astrelov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 14:48:11 by astrelov          #+#    #+#             */
-/*   Updated: 2018/08/08 14:54:01 by astrelov         ###   ########.fr       */
+/*   Updated: 2018/08/16 10:56:41 by astrelov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strsplit_del(char ***split0)
+void	*ft_strsplit_del(char ***split0)
 {
 	char	**split;
 	int		i;
@@ -23,4 +23,5 @@ void	ft_strsplit_del(char ***split0)
 	while (split[++i])
 		ft_strdel(&(split[i]));
 	free(split);
+	return (NULL);
 }
