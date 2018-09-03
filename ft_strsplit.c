@@ -6,7 +6,7 @@
 /*   By: astrelov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/01 17:11:44 by astrelov          #+#    #+#             */
-/*   Updated: 2017/11/01 17:11:45 by astrelov         ###   ########.fr       */
+/*   Updated: 2018/08/17 12:59:00 by null             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int		memory(char const *s, char **res, char c)
 				i++;
 				lett++;
 			}
-			if (!(res[ind] = (char *)malloc(sizeof(*res) * lett + 1)))
+			if (!(res[ind] = (char *)ft_memalloc(sizeof(*res) * lett + 1)))
 				return (0);
 			ind++;
 		}
@@ -78,7 +78,7 @@ char			**ft_strsplit(char const *s, char c)
 	while (s[++i])
 		if (s[i] != c && s[i - 1] == c)
 			words++;
-	if (!(res = (char **)malloc(sizeof(res) * i + 1)))
+	if (!(res = (char **)ft_memalloc(sizeof(res) * i + 1)))
 		return (0);
 	if (memory(s, res, c) == 0)
 		return (0);

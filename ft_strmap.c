@@ -22,7 +22,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (s && f)
 	{
 		len = ft_strlen(s);
-		if (!(str = (char *)malloc(len + 1)))
+		if (!(str = (char *)ft_memalloc(len + 1)))
 			return (0);
 		while (s[++i])
 			str[i] = f(s[i]);

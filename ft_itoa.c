@@ -60,7 +60,7 @@ char			*ft_itoa(int n)
 	n2 = n;
 	isnegative(&n2, &isneg, &length);
 	length += n2length(n2);
-	if (!(res = (char *)malloc(length + 1)))
+	if (!(res = (char *)ft_memalloc(length + 1)))
 		return (0);
 	if (isneg == 0)
 		res[isneg++] = '-';
