@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit_del.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astrelov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: astrelov <astrelov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/03 11:17:02 by astrelov          #+#    #+#             */
+/*   Created: 2018/08/08 14:48:11 by astrelov          #+#    #+#             */
 /*   Updated: 2018/08/16 10:56:41 by astrelov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	*ft_strsplit_del(char ***split0)
 {
-	t_list	*res;
+	char	**split;
+	int		i;
 
-	if (!(res = (t_list *)ft_memalloc(sizeof(*res))))
-		return (0);
-	if (!content)
-	{
-		res->content = 0;
-		res->content_size = 0;
-	}
-	else
-	{
-		if (!(res->content = ft_memalloc(content_size)))
-		{
-			free(res);
-			return (0);
-		}
-		ft_memcpy(res->content, content, content_size);
-		res->content_size = content_size;
-	}
-	res->next = 0;
-	return (res);
+	split = *split0;
+	*split0 = NULL;
+	i = -1;
+	while (split[++i])
+		ft_strdel(&(split[i]));
+	free(split);
+	return (NULL);
 }

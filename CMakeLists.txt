@@ -3,39 +3,13 @@ project(libft)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(FT_PRINTF
-        ft_printf/includes/ft_printf.h
-        ft_printf/src/ft_printf.c
-        ft_printf/src/parse/flags.c
-        ft_printf/src/parse/parse.c
-        ft_printf/src/parse/width.c
-        ft_printf/src/parse/precision.c
-        ft_printf/src/parse/length.c
-        ft_printf/src/handle/handle.c
-        ft_printf/src/handle/number.c
-        ft_printf/src/handle/char.c
-        ft_printf/src/helpers/buffer.c
-        ft_printf/src/handle/wchar.c
-        ft_printf/src/handle/string.c
-        ft_printf/src/handle/pointer.c
-        ft_printf/src/handle/wstring.c
-        ft_printf/src/handle/integer/integer.c
-        ft_printf/src/handle/integer/octal.c
-        ft_printf/src/handle/integer/hexademical.c
-        ft_printf/src/handle/integer/decimal.c
-        ft_printf/src/handle/integer/tmp.c
-        ft_printf/src/helpers/push_chars.c
-        ft_printf/src/handle/invalid_specifier.c)
-
-add_library(ft
-        ${FT_PRINTF}
+set(FT
         libft.h
         ft_atoi.c
         ft_bzero.c
         ft_d_bblsort.c
         ft_d_minind.c
         ft_d_sqrt.c
-        ft_errmsg.c
         ft_gnl.c
         ft_isalnum.c
         ft_isalpha.c
@@ -98,4 +72,39 @@ add_library(ft
         ft_toupper.c
         ft_strtoupp.c
         ft_strtolow.c
-        ft_putnstr.c)
+        ft_putnstr.c
+        ft_lstrev.c
+        ft_lstlen.c
+        ft_err_exit.c
+        ft_strsplit_del.c
+        )
+
+set(FT_PRINTF
+        ft_printf/includes/ft_printf.h
+        ft_printf/src/ft_printf.c
+        ft_printf/src/parse/flags.c
+        ft_printf/src/parse/parse.c
+        ft_printf/src/parse/width.c
+        ft_printf/src/parse/precision.c
+        ft_printf/src/parse/length.c
+        ft_printf/src/handle/handle.c
+        ft_printf/src/handle/number.c
+        ft_printf/src/handle/char.c
+        ft_printf/src/helpers/buffer.c
+        ft_printf/src/handle/wchar.c
+        ft_printf/src/handle/string.c
+        ft_printf/src/handle/pointer.c
+        ft_printf/src/handle/wstring.c
+        ft_printf/src/handle/integer/integer.c
+        ft_printf/src/handle/integer/octal.c
+        ft_printf/src/handle/integer/hexademical.c
+        ft_printf/src/handle/integer/decimal.c
+        ft_printf/src/handle/integer/tmp.c
+        ft_printf/src/helpers/push_chars.c
+        ft_printf/src/handle/invalid_specifier.c
+        )
+
+add_library(ft
+        ${FT_PRINTF}
+        ${FT}
+        )
